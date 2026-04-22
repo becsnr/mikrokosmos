@@ -1,0 +1,86 @@
+.home {
+    background-color: #c9a2ffa1;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo {
+    color: #4b2e83;
+    font-size: 3em;
+    text-shadow: 0px 2px 4px #0000003b;
+}
+
+.planeta {
+    position: relative;
+    
+}
+
+.planeta img {
+    height: 30px;
+}
+
+/* estrelinha */
+.star1::before {
+    content: "✦";
+    position: absolute;
+    font-size: 15px;
+    color: #a828d7;
+    top: -5%;
+    right: -6%;
+}
+
+.subtitulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subtitulo p {
+    color: #d71eaf;
+    font-size: .6em;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 1px 3px #e817bbcc;
+}
+
+.subtitulo span {
+    width: 50px;
+    height: 0;
+    border: 1px solid #d71eaf;
+    box-shadow: 0 1px 3px #e817bbcc;
+}
+
+.star2::before {
+    content: "✦";
+    position: absolute;
+    font-size: 15px;
+    color: #d71eaf;
+    top: 28%;
+    right: 50%;
+}
+
+@media (min-width: 1000px) {
+    .titulo {
+        font-size: 4em;
+    }
+
+    .planeta img {
+        height: 40px;
+    }
+
+    .star::before {
+        font-size: 24px;
+        top: -10%;
+    }
+
+    .subtitulo p {
+        font-size: 1em;
+    }
+}
