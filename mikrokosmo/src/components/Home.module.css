@@ -83,4 +83,10 @@
     .subtitulo p {
         font-size: 1em;
     }
+
+    .star2::before {
+    font-size: 20px;
+    top: 32%;
+    right: 50%;
+}
 }
