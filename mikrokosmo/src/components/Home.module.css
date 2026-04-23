@@ -1,59 +1,115 @@
 .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background-color: #c9a2ffa1;
+    position: relative;
     min-height: 100vh;
-}
 
-.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    justify-content: flex-start;
+    /* gap: 20px; */
+
+    padding-top: 120px;
+    background-color: #c9a2ffa1;
 }
 
+.slogan {
+    position: relative;
+    z-index: 2;
 
+    margin-top: -130px;
+    text-align: center;
+    max-width: 300px;
+
+    background: linear-gradient(to bottom, transparent, #DDC4FF);
+}
+
+.slogan h1 {
+    color: #4b2e83;
+    font-size: 2.5em;
+    line-height: 1.2;
+}
+
+.slogan span {
+    color: #d71eaf;
+}
+
+.slogan p {
+    color: #4b2e83;
+    font-size: 1em;
+}
+
+.slogan button {
+    width: 200px;
+    margin-top: 20px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #ff4ecb,#d71eaf);
+
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    transition: .3s;
+    cursor: pointer;
+}
+
+.slogan button:hover {
+    transform: scale(1.05);
+}
+
+.imagem {
+    position: relative;
+    z-index: 1;
+}
+
+.imagem::after { /* esconder o final da imagem */
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to bottom, transparent 50%, #DDC4FF 90%);
+}
 
 .imagem img {
     height: 400px;
+    display: block;
+
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
 }
 
+/* DESKTOP */
 @media (min-width: 800px) {
     .home {
-        flex-direction: row;
+        /* flex-direction: row; */
         align-items: center;
-        gap: 200px;
-        padding: 20px; 
-        /* justify-content: space-between; */
+        justify-content: space-between;
+        /* gap: 200px; */
+        padding: 80px;
+
+        position: relative;
+    }
+
+    .slogan {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .slogan h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    .imagem img {
+        position: absolute;
+        right: 80px;
+        bottom: 0;
+        height: 400px;
     }
 }
 
 @media (min-width: 1000px) {
-
-    .titulo {
-        font-size: 4em;
-    }
-
-    .planeta img {
-        height: 40px;
-    }
-
-    .star1::before {
-        font-size: 24px;
-        top: -10%;
-    }
-
-    .subtitulo p {
-        font-size: 1em;
-    }
-
-    .star2::before {
-        font-size: 20px;
-        top: 32%;
-        right: 50%;
-    }
 
     .imagem img {
         height: 500px;
