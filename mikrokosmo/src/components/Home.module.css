@@ -14,61 +14,7 @@
     text-align: center;
 }
 
-.titulo {
-    color: #4b2e83;
-    font-size: 3em;
-    text-shadow: 0px 2px 4px #0000003b;
-}
 
-.planeta {
-    position: relative;
-    
-}
-
-.planeta img {
-    height: 30px;
-}
-
-/* estrelinha */
-.star1::before {
-    content: "✦";
-    position: absolute;
-    font-size: 15px;
-    color: #a828d7;
-    top: -5%;
-    right: -6%;
-}
-
-.subtitulo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.subtitulo p {
-    color: #d71eaf;
-    font-size: .6em;
-    font-weight: lighter;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    text-shadow: 0 1px 3px #e817bbcc;
-}
-
-.subtitulo span {
-    width: 50px;
-    height: 0;
-    border: 1px solid #d71eaf;
-    box-shadow: 0 1px 3px #e817bbcc;
-}
-
-.star2::before {
-    content: "✦";
-    position: absolute;
-    font-size: 15px;
-    color: #d71eaf;
-    top: 28%;
-    right: 50%;
-}
 
 .imagem img {
     height: 400px;

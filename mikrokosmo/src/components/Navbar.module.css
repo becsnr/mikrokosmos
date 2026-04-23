@@ -1,23 +1,98 @@
 nav {
     display: flex;
-    justify-content: flex-end;
-    gap: 40px;
+    justify-content: space-between;
     font-size: 1em;
-    padding: 10px;
+    padding: 20px;
     height: 30px;
     background-color: #c9a2ffa1;
 }
 
-nav p {color: #4b2e83;
-    text-shadow: 1px 1px 5px #4a2e8378; 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo {
+    color: #4b2e83;
+    font-size: 1.7em;
+    text-shadow: 0px 2px 4px #0000003b;
+}
+
+.planeta {
+    position: relative;
+}
+
+.planeta img {
+    height: 20px;
+}
+
+.subtitulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subtitulo p {
+    color: #d71eaf;
+    font-size: .5em;
+    font-weight: lighter;
     text-transform: uppercase;
-    font-weight: 500;
-    cursor: pointer;
+    letter-spacing: 5px;
+    text-shadow: 0 1px 3px #e817bbcc;
+}
+
+.subtitulo span {
+    width: 20px;
+    height: 0;
+    border: 1px solid #d71eaf;
+    box-shadow: 0 1px 3px #e817bbcc;
+}
+
+.menu {
+    display: none;
+}
+
+.menuSVG svg {
+    font-size: 2em;
+    fill: #4b2e83;
+}
+
+@media (min-width: 700px) {
+    .menuSVG {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        gap: 40px;
+    }
+
+    .menu p {
+        color: #4b2e83;
+        text-shadow: 1px 1px 5px #4a2e8378; 
+        text-transform: uppercase;
+        font-weight: 500;
+        cursor: pointer;
+    }
 }
 
 @media (min-width: 1000px) {
     nav {
-        padding-right: 50px;
+        padding: 50px;
         font-size: 1.2em;
+    }
+
+    .titulo {
+        font-size: 2em;
+    }
+
+    .planeta img {
+        height: 25px;
+    }
+
+    .subtitulo span {
+        width: 30px;
     }
 }
