@@ -1,4 +1,8 @@
 .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     background-color: #c9a2ffa1;
     min-height: 100vh;
 }
@@ -66,7 +70,22 @@
     right: 50%;
 }
 
+.imagem img {
+    height: 400px;
+}
+
+@media (min-width: 800px) {
+    .home {
+        flex-direction: row;
+        align-items: center;
+        gap: 200px;
+        padding: 20px; 
+        /* justify-content: space-between; */
+    }
+}
+
 @media (min-width: 1000px) {
+
     .titulo {
         font-size: 4em;
     }
@@ -85,8 +104,12 @@
     }
 
     .star2::before {
-    font-size: 20px;
-    top: 32%;
-    right: 50%;
-}
+        font-size: 20px;
+        top: 32%;
+        right: 50%;
+    }
+
+    .imagem img {
+        height: 500px;
+    }
 }

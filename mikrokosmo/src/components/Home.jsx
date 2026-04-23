@@ -1,6 +1,7 @@
 import styles from './Home.module.css'
 
 import planeta from '../assets/logo-planeta.png'
+import ice from '../assets/ice-cream-home.png'
 
 function Home() {
     return (
@@ -20,7 +21,11 @@ function Home() {
                         <p>sweets</p>
                         <span></span>
                     </h2>
-                    <span className={styles.star2}></span>
+                    {/* <span className={styles.star2}></span> */}
+                </div>
+
+                <div className={styles.imagem}>
+                    <img src={ice} alt="" />
                 </div>
             </section>
         </>
