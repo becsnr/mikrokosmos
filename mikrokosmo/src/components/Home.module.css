@@ -101,7 +101,8 @@
     }
 
     .imagem img {
-        height: 400px;
+        height: 500px;
+        transform: rotate(10deg);
     }
 
     .imagem::after {
@@ -110,8 +111,28 @@
 }
 
 @media (min-width: 1000px) {
-
     .imagem img {
-        height: 500px;
+        height: 600px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slogan {
+        padding-left: 100px;
+        max-width: 500px;
+    }
+
+    .slogan h1 {
+        font-size: 3.5em;
+    }
+
+    .slogan p {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1300px) {
+    .imagem {
+        padding-right: 60px;
     }
 }

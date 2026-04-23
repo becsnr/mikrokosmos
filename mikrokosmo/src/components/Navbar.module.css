@@ -1,16 +1,21 @@
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
     font-size: 1em;
     padding: 20px;
-    height: 30px;
-    background-color: #c9a2ffa1;
+
+    height: 40px;
+    background-color: #DDC4FF;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 100%;
+
     text-align: center;
 }
 
@@ -57,9 +62,19 @@ nav {
 .menuSVG svg {
     font-size: 2em;
     fill: #4b2e83;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 @media (min-width: 700px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .container {
+        max-width: 300px;
+    }
+
     .menuSVG {
         display: none;
     }
@@ -74,13 +89,14 @@ nav {
         text-shadow: 1px 1px 5px #4a2e8378; 
         text-transform: uppercase;
         font-weight: 500;
+        margin-top: 10px;
         cursor: pointer;
     }
 }
 
 @media (min-width: 1000px) {
     nav {
-        padding: 50px;
+        padding: 30px;
         font-size: 1.2em;
     }
 
