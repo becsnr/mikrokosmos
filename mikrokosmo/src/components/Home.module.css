@@ -82,30 +82,30 @@
 /* DESKTOP */
 @media (min-width: 800px) {
     .home {
-        /* flex-direction: row; */
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
-        /* gap: 200px; */
-        padding: 80px;
-
-        position: relative;
+        padding: 0 50px;
     }
 
     .slogan {
         align-items: flex-start;
         text-align: left;
+        max-width: 360px;
     }
 
     .slogan h1 {
         font-size: 3rem;
         line-height: 1.2;
+        margin-bottom: 20px;
     }
 
     .imagem img {
-        position: absolute;
-        right: 80px;
-        bottom: 0;
         height: 400px;
+    }
+
+    .imagem::after {
+        content: none;
     }
 }
 
