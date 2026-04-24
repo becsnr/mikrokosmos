@@ -1,6 +1,6 @@
 .home {
     position: relative;
-    min-height: 100vh;
+    min-height: 100%;
 
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     /* gap: 20px; */
 
     padding-top: 120px;
-    background-color: #c9a2ffa1;
+    /* background-color: #c9a2ffa1; */
 }
 
 .slogan {
@@ -86,6 +86,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 50px;
+        min-height: 100vh;
     }
 
     .slogan {

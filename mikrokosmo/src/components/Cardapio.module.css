@@ -1,0 +1,29 @@
+.cabecalho {
+    display: flex;
+}
+
+.cabecalho img {
+    height:  60px;
+}
+
+.pinkPlanet {
+    display: none;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.titulo h1 {
+    font-size: 3em;
+    color: #4b2e83;
+}
+
+.titulo p {
+    font-size: 1.1em;
+    color: #4b2e83;
+}
+
+.titulo span {
+    color: #d71eaf;
+}
