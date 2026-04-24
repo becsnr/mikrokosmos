@@ -1,3 +1,11 @@
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
 .cabecalho {
     display: flex;
 }
@@ -26,4 +34,31 @@
 
 .titulo span {
     color: #d71eaf;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+}
+
+.btns button {
+    font-size: .9em;
+    min-width: 120px;
+
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+
+    color: #4b2e83;
+    background-color: #EEE3FC;
+    box-shadow: 1px 1px 5px #00000039;
+
+    transition: .2s;
+    cursor: pointer;
+}
+
+.btns button:hover {
+    background: linear-gradient(90deg, #ff4ecb,#d71eaf);
+    color: white;
+    transform: scale(1.05);
 }
