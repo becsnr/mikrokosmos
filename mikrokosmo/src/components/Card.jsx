@@ -1,5 +1,11 @@
+import styles from './Card.module.css'
+
 function Card() {
-    return
+    return (
+        <div className={styles.container}>
+            
+        </div>
+    )
 }
 
 export default Card

@@ -12,7 +12,11 @@ import stars from '../assets/stars.png'
 
 import Card from './Card'
 
+import { useNavigate } from 'react-router-dom'
+
 function Cardapio() {
+    // const navigate = useNavigate();
+
     return (
         <section>
             <div className={styles.cabecalho}>
@@ -49,6 +53,8 @@ function Cardapio() {
                     Bebidas
                 </button>
             </div>
+
+            <Card />
         </section>
     )
 }
