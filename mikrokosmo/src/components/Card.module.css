@@ -1,3 +1,45 @@
-.container {
-    height: 500px;
+.card {
+    width: 200px;
+    height: 340px;
+    padding: 5px;
+
+    border-radius: 20px;
+    background-color: #EEE3FC;
+    box-shadow: 1px 1px 10px #0000002b;
+
+    text-align: center;
+}
+
+.imgCard {
+    background-color: aqua;
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+
+.imgCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.card h3 {
+    font-size: 1.3em;
+    color: #4b2e83;
+    margin: 5px;
+}
+
+.card p {
+    color: #4b2e83;
+}
+
+.card .sobre {
+    font-size: .9em;
+}
+
+.card .preco {
+    color: #d71eaf;
+    font-weight: bold;
+    padding-top: 20px;
 }

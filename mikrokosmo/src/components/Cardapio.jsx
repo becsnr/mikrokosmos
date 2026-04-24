@@ -10,12 +10,17 @@ import pink from '../assets/pink-planet.png'
 import purple from '../assets/purple-planet.png'
 import stars from '../assets/stars.png'
 
+import { produtos } from '../data/produtos'
+import { useState } from 'react'
+
 import Card from './Card'
 
-import { useNavigate } from 'react-router-dom'
-
 function Cardapio() {
-    // const navigate = useNavigate();
+    const [categoria, setCategoria] = useState("");
+
+    const filtrar = produtos.filter(
+        (item) => item.categoria === categoria
+    );
 
     return (
         <section>
@@ -32,29 +37,33 @@ function Cardapio() {
             </div>
 
             <div className={styles.btns}>
-                <button>
+                <button onClick={() => setCategoria("destaques")} className={categoria === "destaques" ? styles.ativo : ""}>
                     Destaques
                 </button>
-                <button>
+                <button onClick={() => setCategoria("sorvetes")} className={categoria === "sorvetes" ? styles.ativo : ""}>
                     {/* <FaIceCream /> */}
                     Sorvetes
                 </button>
-                <button>
+                <button onClick={() => setCategoria("bolos")} className={categoria === "bolos" ? styles.ativo : ""}>
                     {/* <FaBirthdayCake /> */}
                     Bolos
                 </button>
-                <button>
+                <button onClick={() => setCategoria("doces")} className={categoria === "doces" ? styles.ativo : ""}>
                     {/* <MdCandy /> */}
                     Doces
                 </button>
-                <button>
+                <button onClick={() => setCategoria("bebidas")} className={categoria === "bebidas" ? styles.ativo : ""}>
                     {/* <IoCafe /> */}
                     {/* <FaGlassWhiskey /> */}
                     Bebidas
                 </button>
             </div>
 
-            <Card />
+            <div className={styles.container}>
+                {filtrar.map((item) => (
+                    <Card key={item.id} nome={item.nome} descricao={item.descricao} preco={item.preco} img={item.img} />
+                ))}
+            </div>
         </section>
     )
 }
