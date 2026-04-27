@@ -11,16 +11,29 @@ import purple from '../assets/purple-planet.png'
 import stars from '../assets/stars.png'
 
 import { produtos } from '../data/produtos'
-import { useState } from 'react'
+
+import { useState, useRef } from 'react'
 
 import Card from './Card'
 
 function Cardapio() {
-    const [categoria, setCategoria] = useState("");
+    const [categoria, setCategoria] = useState(""); // cards
+    const listaRef = useRef(null); // btns cards
 
-    const filtrar = produtos.filter(
+    const filtrar = produtos.filter( // cards
         (item) => item.categoria === categoria
     );
+
+    function scroll(direcao) { // botoes direita e esquerda
+        const largura = listaRef.current.offsetWidth;
+
+        if (!listaRef.current) return;
+
+        listaRef.current.scrollBy({
+            left: direcao * largura,
+            behavior: "smooth"
+        });
+    }
 
     return (
         <section>
@@ -60,9 +73,15 @@ function Cardapio() {
             </div>
 
             <div className={styles.container}>
-                {filtrar.map((item) => (
-                    <Card key={item.id} nome={item.nome} descricao={item.descricao} preco={item.preco} img={item.img} />
-                ))}
+                <button className={styles.left} onClick={() => scroll(-1)}>{"<"}</button>
+
+                <div className={styles.lista} ref={listaRef}>
+                    {filtrar.map((item) => (
+                        <Card key={item.id} nome={item.nome} descricao={item.descricao} preco={item.preco} img={item.img} />
+                    ))}
+                </div>
+
+                 <button className={styles.right} onClick={() => scroll(1)}>{">"}</button>           
             </div>
         </section>
     )
