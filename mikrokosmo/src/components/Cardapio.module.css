@@ -39,6 +39,10 @@ section {
 .btns {
     display: flex;
     gap: 10px;
+    width: 100%;
+    padding: 10px;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .btns button {
