@@ -10,29 +10,33 @@ import pink from '../assets/pink-planet.png'
 import purple from '../assets/purple-planet.png'
 import stars from '../assets/stars.png'
 
-import { produtos } from '../data/produtos'
+import { produtos, destaques } from '../data/produtos'
 
 import { useState, useRef } from 'react'
 
 import Card from './Card'
 
 function Cardapio() {
-    const [categoria, setCategoria] = useState(""); // cards
+    const [categoria, setCategoria] = useState("destaques"); // cards
 
     const listaRef = useRef(null); // btns cards
 
-    const destaque = produtos.find((d) => d.categoria === "destaques"); // procurar destaques dos produtos
+    let listaDestaques = []; 
 
-    const destaqueProdutos = produtos.filter((i) => categoria.itens)
-
-    const filtrar = produtos.filter( // cards
-        (item) => item.categoria === categoria
-    );
+    if (categoria === "destaques") {
+        listaDestaques = produtos.filter(item => 
+            destaques.includes(Number(item.id))
+        );
+    } else {
+        listaDestaques = produtos.filter(
+            (item) => item.categoria === categoria
+        );
+    }
 
     function scroll(direcao) { // botoes direita e esquerda
-        const largura = listaRef.current.offsetWidth;
-
         if (!listaRef.current) return;
+
+        const largura = listaRef.current.offsetWidth;
 
         listaRef.current.scrollBy({
             left: direcao * largura,
@@ -80,10 +84,16 @@ function Cardapio() {
             <div className={styles.container}>
                 <button className={styles.left} onClick={() => scroll(-1)}>{"<"}</button>
 
-                <div className={styles.lista} ref={listaRef}>
-                    {filtrar.map((item) => (
-                        <Card key={item.id} nome={item.nome} descricao={item.descricao} preco={item.preco} img={item.img} />
-                    ))}
+                <div className={styles.lista} ref={listaRef || null}>
+                    {listaDestaques.map((item) => (
+                        <Card 
+                            key={item.id} 
+                            nome={item.nome} 
+                            descricao={item.descricao} 
+                            preco={item.preco} 
+                            img={item.img} 
+                        />
+                    ))} 
                 </div>
 
                  <button className={styles.right} onClick={() => scroll(1)}>{">"}</button>           
