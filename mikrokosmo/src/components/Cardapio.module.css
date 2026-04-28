@@ -77,6 +77,7 @@ section {
     position: relative;
     width: 100%;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .container::before, .container::after {
