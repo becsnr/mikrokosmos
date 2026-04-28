@@ -45,14 +45,22 @@
 }
 
 /* DESKTOP */
-/* @media (min-width: 800px) {
+@media (min-width: 800px) {
     .card {
-        box-shadow: 10px 10px 10px black;
+        height: 380px;
     }
-} */
 
-@media (min-width: 1300px) {
+    .card h3 {
+        font-size: 1.5em;
+    }
+
+    .card .sobre {
+        font-size: 1em;
+    }
+} 
+
+/* @media (min-width: 1300px) {
     .card {
         width: 200px;
     }
-}
+} */

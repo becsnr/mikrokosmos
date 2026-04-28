@@ -1,5 +1,15 @@
 // SORVETES
-import mikrokosmo from '../assets/sorvetes/mikrokosmos.png'
+import iceMikrokosmo from '../assets/sorvetes/ice-mikrokosmos.png'
+
+import iceCosmo from '../assets/sorvetes/ice-cosmo.png'
+
+import iceVenus from '../assets/sorvetes/ice-venus.png'
+
+import iceSaturno from '../assets/sorvetes/ice-saturno.png'
+
+import iceNebulosa from '../assets/sorvetes/ice-nebulosa.png'
+
+import iceGalaxia from '../assets/sorvetes/ice-galaxia.png'
 
 // BOLOS
 import boloGalaxia from '../assets/bolos/bolo-galaxia.png'
@@ -22,7 +32,7 @@ export const produtos = [
         nome: "Mikrokosmos",
         descricao: "Sorvete artesanal com 4 sabores e confeitos galácticos.",
         preco: "26,90",
-        img: mikrokosmo
+        img: iceMikrokosmo
     },
     {
         id: 2,
@@ -30,7 +40,7 @@ export const produtos = [
         nome: "Cosmo Delight",
         descricao: "Creme de avelã com sorvete de baunilha e estrelas crocantes.",
         preco: "23,90",
-        img:''
+        img: iceCosmo
     },
     {
         id: 3,
@@ -38,7 +48,7 @@ export const produtos = [
         nome: "Vênus Shake",
         descricao: "Milkshake de morango com chantily e calda especial.",
         preco: "17,90",
-        img:''
+        img: iceVenus
     },
     {
         id: 4,
@@ -46,7 +56,7 @@ export const produtos = [
         nome: "Saturno Cup",
         descricao: "Sorvete de chocolate com brownie e caramelo salgado.",
         preco: "23,90",
-        img:''
+        img: iceSaturno
     },
     {
         id: 5,
@@ -54,15 +64,15 @@ export const produtos = [
         nome: "Nebulosa",
         descricao: "Sorvete de frutas vermelhas com calda de uva e wafer.",
         preco: "22,90",
-        img:''
+        img: iceNebulosa
     },
     {
         id: 6,
         categoria: "sorvetes",
-        nome: "CRIAR UM",
-        descricao: ".",
+        nome: "Galáxia Shake",
+        descricao: "Milkshake cremoso, coberto com chantilly e calda cósmica.",
         preco: "23,90",
-        img:''
+        img: iceGalaxia
     },
         // BOLOS
     {
