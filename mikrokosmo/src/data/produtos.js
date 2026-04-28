@@ -24,6 +24,10 @@ import boloCometa from '../assets/bolos/bolo-cometa.png'
 
 import boloCratera from '../assets/bolos/bolo-cratera.png'
 
+// DOCES
+
+import cookie from '../assets/doces/cookie-estelar.png'
+
 export const produtos = [
         // SORVETES
     {
@@ -130,7 +134,7 @@ export const produtos = [
         nome: "Cookie Estelar",
         descricao: "Cookie recheado com gotas de chocolate e M&M's.",
         preco: "9,90",
-        img: null
+        img: cookie
     },
     {
         id: 14,
