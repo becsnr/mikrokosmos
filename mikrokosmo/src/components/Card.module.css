@@ -43,3 +43,10 @@
     font-weight: bold;
     padding-top: 20px;
 }
+
+/* DESKTOP */
+@media (min-width: 1300px) {
+    .card {
+        width: 200px;
+    }
+}
