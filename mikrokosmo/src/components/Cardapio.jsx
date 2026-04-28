@@ -18,7 +18,12 @@ import Card from './Card'
 
 function Cardapio() {
     const [categoria, setCategoria] = useState(""); // cards
+
     const listaRef = useRef(null); // btns cards
+
+    const destaque = produtos.find((d) => d.categoria === "destaques"); // procurar destaques dos produtos
+
+    const destaqueProdutos = produtos.filter((i) => categoria.itens)
 
     const filtrar = produtos.filter( // cards
         (item) => item.categoria === categoria

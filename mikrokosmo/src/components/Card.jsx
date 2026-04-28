@@ -4,7 +4,7 @@ function Card( { nome, preco, img, descricao } ) {
     return (
         <div className={styles.card}>
             <div className={styles.imgCard}>
-                <img src={img} />
+                {img && <img src={img} alt="" />}
             </div>
             <h3>{nome}</h3>
             <p className={styles.sobre}>{descricao}</p>
