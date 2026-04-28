@@ -10,6 +10,8 @@ import boloAndromeda from '../assets/bolos/bolo-andromeda.png'
 
 import boloEclipse from '../assets/bolos/bolo-eclipse.png'
 
+import boloCometa from '../assets/bolos/bolo-cometa.png'
+
 import boloCratera from '../assets/bolos/bolo-cratera.png'
 
 export const produtos = [
@@ -91,7 +93,7 @@ export const produtos = [
         id: 10,
         categoria: "bolos",
         nome: "Eclipse Nebuloso",
-        descricao: "Camadas de chocolate, envolidas por uma cobertura galáctica brilhante.",
+        descricao: "Camadas de chocolate, envolvidas por uma cobertura galáctica brilhante.",
         preco: "19,90",
         img: boloEclipse
     },
@@ -99,9 +101,9 @@ export const produtos = [
         id: 11,
         categoria: "bolos",
         nome: "Cometa de Morango",
-        descricao: ".",
+        descricao: "Bolo de baunilha com frutas vermelhas e cobertura de morango.",
         preco: "20,90",
-        img: ""
+        img: boloCometa
     },
     {
         id: 12,
@@ -211,4 +213,4 @@ export const produtos = [
     }
 ]
 
-export const destaques = [1, 8, 13, 20]
+export const destaques = [1, 8, 11, 13, 20]
