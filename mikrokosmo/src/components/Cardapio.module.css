@@ -151,12 +151,48 @@ section {
 }
 
 /* DESKTOP */
-@media (min-width: 1360px) {
+@media (min-width: 800px) {
+    .cabecalho {
+        justify-content: space-between;
+        
+        width: 100%;
+    }
+
+    .cabecalho img {
+        height: 120px;
+    }
+
+    .stars {
+        display: none;
+    }
+
+    .pinkPlanet {
+        display: block;
+    }
+
+    .titulo h1 {
+        font-size: 5em;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #EEE3FC;
+        padding: 8px;
+    }
+
     .container::after, .container::before {
         background: none;
     }
 
     .left, .right {
         display: none;
+    }
+
+    .lista {
+        display: grid;
+        grid-template-columns: repeat(3, 250px);
+        width: 100%;
     }
 }
