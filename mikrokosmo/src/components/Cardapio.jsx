@@ -2,7 +2,7 @@ import styles from './Cardapio.module.css'
 
 // import { IoCafe } from "react-icons/io5";
 // import { MdCandy } from "react-icons/md";
-import { FaIceCream, FaBirthdayCake, FaGlassWhiskey } from "react-icons/fa";
+import { FaIceCream, FaBirthdayCake, FaGlassWhiskey, FaCandyCane, FaStar } from "react-icons/fa";
 // import { GiMilkshake } from "react-icons/gi";
 
 
@@ -60,6 +60,7 @@ function Cardapio() {
 
             <div className={styles.btns}>
                 <button onClick={() => setCategoria("destaques")} className={categoria === "destaques" ? styles.ativo : ""}>
+                    <FaStar />
                     Destaques
                 </button>
                 <button onClick={() => setCategoria("sorvetes")} className={categoria === "sorvetes" ? styles.ativo : ""}>
@@ -67,16 +68,16 @@ function Cardapio() {
                     Sorvetes
                 </button>
                 <button onClick={() => setCategoria("bolos")} className={categoria === "bolos" ? styles.ativo : ""}>
-                    {/* <FaBirthdayCake /> */}
+                    <FaBirthdayCake />
                     Bolos
                 </button>
                 <button onClick={() => setCategoria("doces")} className={categoria === "doces" ? styles.ativo : ""}>
-                    {/* <MdCandy /> */}
+                    <FaCandyCane />
                     Doces
                 </button>
                 <button onClick={() => setCategoria("bebidas")} className={categoria === "bebidas" ? styles.ativo : ""}>
                     {/* <IoCafe /> */}
-                    {/* <FaGlassWhiskey /> */}
+                    <FaGlassWhiskey />
                     Bebidas
                 </button>
             </div>
