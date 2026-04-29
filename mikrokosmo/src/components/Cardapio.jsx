@@ -2,7 +2,7 @@ import styles from './Cardapio.module.css'
 
 // import { IoCafe } from "react-icons/io5";
 // import { MdCandy } from "react-icons/md";
-// import { FaIceCream, FaBirthdayCake, FaGlassWhiskey } from "react-icons/fa";
+import { FaIceCream, FaBirthdayCake, FaGlassWhiskey } from "react-icons/fa";
 // import { GiMilkshake } from "react-icons/gi";
 
 
@@ -63,7 +63,7 @@ function Cardapio() {
                     Destaques
                 </button>
                 <button onClick={() => setCategoria("sorvetes")} className={categoria === "sorvetes" ? styles.ativo : ""}>
-                    {/* <FaIceCream /> */}
+                    <FaIceCream />
                     Sorvetes
                 </button>
                 <button onClick={() => setCategoria("bolos")} className={categoria === "bolos" ? styles.ativo : ""}>
