@@ -1,6 +1,10 @@
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     min-width: 200px;
-    height: 340px;
+    height: 320px;
     padding: 5px;
 
     border-radius: 20px;
@@ -42,12 +46,13 @@
     color: #d71eaf;
     font-weight: bold;
     padding-top: 20px;
+    margin-top: auto;
 }
 
 /* DESKTOP */
 @media (min-width: 800px) {
     .card {
-        height: 380px;
+        height: 350px;
     }
 
     .card h3 {
