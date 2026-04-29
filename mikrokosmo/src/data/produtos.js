@@ -28,6 +28,22 @@ import boloCratera from '../assets/bolos/bolo-cratera.png'
 
 import cookie from '../assets/doces/cookie-estelar.png'
 
+import trufas from '../assets/doces/trufas.png'
+
+import pote from '../assets/doces/pote-galaxia.png'
+
+import pudim from '../assets/doces/pudim.png'
+
+import brigadeiro from '../assets/doces/brigadeiro.png'
+
+import mousse from '../assets/doces/mousse.png'
+
+// BEBIDAS
+
+import limonadaLunar from '../assets/bebidas/limonada-lunar.png'
+
+import pocao from '../assets/bebidas/pocao.png'
+
 export const produtos = [
         // SORVETES
     {
@@ -139,51 +155,59 @@ export const produtos = [
     {
         id: 14,
         categoria: "doces",
-        nome: "CRIAR",
-        descricao: ".",
+        nome: "Trufas Nebulares",
+        descricao: "Trufas cremosas com recheio suave e cobertura galáctica.",
         preco: "29,90",
-        img: ""
+        img: trufas
     },
     {
         id: 15,
         categoria: "doces",
-        nome: "CRIAR",
-        descricao: ".",
-        preco: "29,90",
-        img: ""
+        nome: "Pote Galáxia",
+        descricao: "Camadas cremosas com efeito galáxia.",
+        preco: "19,90",
+        img: pote
     },
     {
         id: 16,
         categoria: "doces",
-        nome: "CRIAR",
-        descricao: ".",
+        nome: "Pudim Estelar",
+        descricao: "Pudim cremoso com calda brilhante e efeito galáxia.",
         preco: "29,90",
-        img: ""
+        img: pudim
+    },
+    {
+        id: 17,
+        categoria: "doces",
+        nome: "Brigadeiro Galáctico",
+        descricao: "Brigadeiro cremoso coberto com confeitos cósmicos.",
+        preco: "29,90",
+        img: brigadeiro
     },
     {
         id: 18,
         categoria: "doces",
-        nome: "CRIAR",
-        descricao: ".",
-        preco: "29,90",
-        img: ""
-    },
-    {
-        id: 19,
-        categoria: "doces",
-        nome: "CRIAR",
-        descricao: ".",
-        preco: "29,90",
-        img: ""
+        nome: "Mousse de Maracujá",
+        descricao: "Mousse de maracujá com cobertura galáctica.",
+        preco: "15,90",
+        img: mousse
     },
         // BEBIDAS
     {
-        id: 20,
+        id: 19,
         categoria: "bebidas",
         nome: "Limonada Lunar",
         descricao: "Limonada rosa com hortelã e um toque de frutas.",
         preco: "12,90",
-        img: null
+        img: limonadaLunar
+    },
+    {
+        id: 20,
+        categoria: "bebidas",
+        nome: "Poção Mágica",
+        descricao: "Bebida refrescante com efeito galáxia.",
+        preco: "29,90",
+        img: pocao
     },
     {
         id: 21,
@@ -216,15 +240,7 @@ export const produtos = [
         descricao: ".",
         preco: "29,90",
         img: ""
-    },
-    {
-        id: 25,
-        categoria: "bebidas",
-        nome: "CRIAR",
-        descricao: ".",
-        preco: "29,90",
-        img: ""
     }
 ]
 
-export const destaques = [1, 8, 11, 13, 20]
+export const destaques = [1, 3, 8, 11, 13, 18, 19]
