@@ -2,20 +2,34 @@ import styles from './Navbar.module.css'
 
 import Logo from './Logo';
 
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaIceCream, FaPhone } from 'react-icons/fa';
+
+import { useState } from 'react';
 
 function Navbar() {
+    const [menuAberto, setMenuAberto] = useState(false);
+
     return (
         <nav className={styles.nav}>
             <Logo />
 
-            <div className={styles.menuSVG}><FaBars /></div>
-            <div className={styles.menu}>
+            <div className={styles.menuWrap}>
+
+                <button className={styles.menuSVG} onClick={() => setMenuAberto(!menuAberto)} >
+                    {menuAberto ? <FaTimes /> : <FaBars />}
+                </button>
+
+                <div className={`${styles.menu} ${menuAberto ? styles.menuAtivo : ''}`}>
+                    <FaHome />
+                    <FaIceCream />
+                    <FaPhone />
                 
-                <p>Home</p>
-                <p>Menu</p>
-                <p>Sobre</p>
-                <p>Contato</p>
+                    <a>Home</a>
+                    <a>Menu</a>
+                    <a>Sobre</a>
+                    <a>Contato</a>
+                </div>
+
             </div>
         </nav>
     )

@@ -1,6 +1,7 @@
 nav {
     display: flex;
     justify-content: center;
+    position: relative;
 
     font-size: 1em;
     padding: 20px;
@@ -9,31 +10,22 @@ nav {
     /* background-color: #DDC4FF; */
 }
 
-.menu {
-    display: none;
+.menuWrap {
+    position: fixed;
+    top: 20px;
+    right: 30px;
 }
 
-.menu p {
+.menuSVG {
+    border: none;
+    background: none;
+    
     position: relative;
-}
+    z-index: 2;
 
-.menu p::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background-color: #d71eaf;
-    transition: width .2s ease;
-}
-
-.menu p:hover {
-    color: #d71eaf;
-}
-
-.menu p:hover::after {
-    width: 100%;
+    background-color: #c7a2fb;
+    border-radius: 40px;
+    width: 58px;
 }
 
 .menuSVG svg {
@@ -41,6 +33,47 @@ nav {
     fill: #4b2e83;
     margin-top: 10px;
     cursor: pointer;
+}
+
+.menu { /* começa escondido */
+    position: absolute;
+    top: 30px;
+    right: auto;
+    left: -10%;
+
+    width: auto;
+    height: 0;
+    padding: 20px;
+    border-radius: 0 0 40px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    overflow: hidden;
+    padding-top: 30px;
+
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+.menuAtivo {
+    height: auto;
+    background-color: #c7a2fb;
+    pointer-events: auto;
+}
+
+.menu svg {
+    font-size: 1.3em;
+    fill: #382262;
+    transition: .2s;
+    cursor: pointer;
+    
+}
+
+.menu a {
+    display: none;
 }
 
 @media (min-width: 700px) {
@@ -52,18 +85,57 @@ nav {
         display: none;
     }
 
+    .menu svg {
+        display: none;
+    }
+
+    .menuWrap {
+        top: 30px;
+        right: 0;
+    }
+
     .menu {
+        top: 0;
+        background: none;
+        border-radius: 0;
+        width: auto;
+
         display: flex;
+        flex-direction: row;
         gap: 40px;
     }
 
-    .menu p {
+    .menu a {
+        display: flex;
+        position: relative;
+
         color: #4b2e83;
+        font-size: 1em;
         text-shadow: 1px 1px 5px #4a2e8378; 
         text-transform: uppercase;
         font-weight: 500;
+
         margin-top: 10px;
         cursor: pointer;
+    }
+
+    .menu a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        background-color: #d71eaf;
+        transition: width .2s ease;
+    }
+
+    .menu a:hover {
+        color: #d71eaf;
+    }
+
+    .menu a:hover::after {
+        width: 100%;
     }
 }
 
