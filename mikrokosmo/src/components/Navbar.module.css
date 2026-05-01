@@ -7,13 +7,15 @@ nav {
     padding: 20px;
 
     height: 40px;
-    /* background-color: #DDC4FF; */
 }
 
 .menuWrap {
     position: fixed;
     top: 20px;
     right: 30px;
+    border-radius: 40px;
+    width: 60px;
+    height: auto;
 }
 
 .menuSVG {
@@ -23,9 +25,8 @@ nav {
     position: relative;
     z-index: 2;
 
-    background-color: #c7a2fb;
-    border-radius: 40px;
-    width: 58px;
+    border-radius: 40px 40px 0 0;
+    width: 61px;
 }
 
 .menuSVG svg {
@@ -37,12 +38,13 @@ nav {
 
 .menu { /* começa escondido */
     position: absolute;
-    top: 30px;
-    right: auto;
-    left: -10%;
+    top: 40px;
+    right: 2;
+
+    transform: scaleY(0);
+    transform-origin: top; /* abrir de cima pra baixo */
 
     width: auto;
-    height: 0;
     padding: 20px;
     border-radius: 0 0 40px 40px;
 
@@ -51,28 +53,27 @@ nav {
     align-items: center;
     gap: 25px;
 
-    overflow: hidden;
-    padding-top: 30px;
-
-    pointer-events: none;
-    transition: .3s ease;
+    opacity: 0;
+    pointer-events: none;   
+    
+    transition: transform .3s ease, opacity .2s ease;
 }
 
 .menuAtivo {
-    height: auto;
+    transform: scaleY(1);
+    opacity: 1;
     background-color: #c7a2fb;
     pointer-events: auto;
 }
 
 .menu svg {
     font-size: 1.3em;
-    fill: #382262;
+    fill: #4b2e83;
     transition: .2s;
-    cursor: pointer;
-    
+    cursor: pointer !important;
 }
 
-.menu a {
+.menu a.desk {
     display: none;
 }
 
@@ -105,7 +106,7 @@ nav {
         gap: 40px;
     }
 
-    .menu a {
+    .menu a.desk {
         display: flex;
         position: relative;
 
@@ -119,7 +120,7 @@ nav {
         cursor: pointer;
     }
 
-    .menu a::after {
+    .menu a.desk::after {
         content: "";
         position: absolute;
         left: 0;
@@ -130,11 +131,11 @@ nav {
         transition: width .2s ease;
     }
 
-    .menu a:hover {
+    .menu a.desk:hover {
         color: #d71eaf;
     }
 
-    .menu a:hover::after {
+    .menu a.desk:hover::after {
         width: 100%;
     }
 }

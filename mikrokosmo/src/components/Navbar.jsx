@@ -15,19 +15,33 @@ function Navbar() {
 
             <div className={styles.menuWrap}>
 
-                <button className={styles.menuSVG} onClick={() => setMenuAberto(!menuAberto)} >
+                <button className={`${styles.menuSVG} ${menuAberto ? styles.menuAtivo : ''}`} onClick={() => setMenuAberto(!menuAberto)} >
                     {menuAberto ? <FaTimes /> : <FaBars />}
                 </button>
 
                 <div className={`${styles.menu} ${menuAberto ? styles.menuAtivo : ''}`}>
-                    <FaHome />
-                    <FaIceCream />
-                    <FaPhone />
+                    <a className={styles.mob}>
+                        <FaHome />
+                    </a>
+                    <a className={styles.mob}>
+                        <FaIceCream />
+                    </a>
+                    <a className={styles.mob}>
+                        <FaPhone />
+                    </a>
                 
-                    <a>Home</a>
-                    <a>Menu</a>
-                    <a>Sobre</a>
-                    <a>Contato</a>
+                    <a className={styles.desk}>
+                        Home
+                    </a>
+                    <a className={styles.desk}>
+                        Menu
+                    </a>
+                    <a className={styles.desk}>
+                        Sobre
+                    </a>
+                    <a className={styles.desk}>
+                        Contato
+                    </a>
                 </div>
 
             </div>
