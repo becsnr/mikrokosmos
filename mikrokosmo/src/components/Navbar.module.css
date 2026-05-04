@@ -1,6 +1,8 @@
 nav {
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -14,7 +16,7 @@ nav {
 }
 
 .scrolled {
-    background: #c7a2fbe6;
+    background: #c7a2fbdb;
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 20px #0000001a;
 }
@@ -102,19 +104,32 @@ nav {
     }
 
     .menuWrap {
+        /* background-color: #d71eaf; */
+        position: static;
+        width: auto;
+        /* position: static;
         top: 30px;
-        right: 0;
+        right: 0; */
     }
 
     .menu {
-        top: 0;
-        background: none;
-        border-radius: 0;
-        width: auto;
+        position: static;
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
 
         display: flex;
         flex-direction: row;
-        gap: 40px;
+        gap: 20px;
+        padding: 0;
+        width: auto;
+        box-shadow: none;
+        /* background-color: #4b2e83; */
+
+        /* background: none;
+        border-radius: 0; */
+        /* width: auto; */
+        /* margin: 0 auto; */
     }
 
     .menu a.desk {

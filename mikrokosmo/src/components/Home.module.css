@@ -112,6 +112,10 @@
 }
 
 @media (min-width: 1000px) {
+    .home {
+        margin-top: 50px;
+    }
+
     .imagem img {
         height: 600px;
     }
