@@ -49,26 +49,26 @@ function Navbar() {
                 </button>
 
                 <div ref={menuRef} className={`${styles.menu} ${menuAberto ? styles.menuAtivo : ''}`}>
-                    <a className={styles.mob}>
+                    <a href='#home' className={styles.mob}>
                         <FaHome />
                     </a>
-                    <a className={styles.mob}>
+                    <a href='#cardapio' className={styles.mob}>
                         <FaIceCream />
                     </a>
-                    <a className={styles.mob}>
+                    <a href='#dados' className={styles.mob}>
                         <FaPhone />
                     </a>
                 
-                    <a className={styles.desk}>
+                    <a href='#home' className={styles.desk}>
                         Home
                     </a>
-                    <a className={styles.desk}>
+                    <a href='#cardapio' className={styles.desk}>
                         Menu
                     </a>
-                    <a className={styles.desk}>
+                    <a href='#dados' className={styles.desk}>
                         Sobre
                     </a>
-                    <a className={styles.desk}>
+                    <a href='#dados' className={styles.desk}>
                         Contato
                     </a>
                 </div>

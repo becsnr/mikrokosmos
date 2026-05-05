@@ -6,7 +6,7 @@ import Logo from "./Logo"
 
 function Footer() {
     return (
-        <footer>
+        <footer id='dados'>
             <div className={styles.container}>
                 <div className={styles.sobre}>
                     <Logo />

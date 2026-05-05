@@ -41,7 +41,7 @@ function Cardapio() {
     }
 
     return (
-        <section>
+        <section id='cardapio'>
             <div className={styles.cabecalho}>
                 {/* <img src={stars} className={styles.stars} /> */}
                 <img src={pink} className={styles.pinkPlanet} />
