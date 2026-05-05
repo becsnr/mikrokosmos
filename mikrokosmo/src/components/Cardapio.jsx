@@ -17,6 +17,26 @@ function Cardapio() {
 
     const listaRef = useRef(null); // btns cards
 
+    function scroll(direcao) { // botoes direita e esquerda
+        if (!listaRef.current) return;
+
+        const largura = listaRef.current.offsetWidth;
+
+        listaRef.current.scrollBy({
+            left: direcao * largura,
+            behavior: "smooth"
+        });
+    }
+
+    const trocarCategoria = (nova) => { /* reiniciar os cards qnd clicar em outro btn */
+        setCategoria(nova);
+
+        listaRef.current?.scrollTo({
+            left: 0,
+            behavior: "smooth"
+        })
+    }
+
     let listaDestaques = []; 
 
     if (categoria === "destaques") {
@@ -27,17 +47,6 @@ function Cardapio() {
         listaDestaques = produtos.filter(
             (item) => item.categoria === categoria
         );
-    }
-
-    function scroll(direcao) { // botoes direita e esquerda
-        if (!listaRef.current) return;
-
-        const largura = listaRef.current.offsetWidth;
-
-        listaRef.current.scrollBy({
-            left: direcao * largura,
-            behavior: "smooth"
-        });
     }
 
     return (
@@ -55,30 +64,30 @@ function Cardapio() {
             </div>
 
             <div className={styles.btns}>
-                <button onClick={() => setCategoria("destaques")} className={categoria === "destaques" ? styles.ativo : ""}>
+                <button onClick={() => trocarCategoria("destaques")} className={categoria === "destaques" ? styles.ativo : ""}>
                     <FaStar />
                     Destaques
                 </button>
-                <button onClick={() => setCategoria("sorvetes")} className={categoria === "sorvetes" ? styles.ativo : ""}>
+                <button onClick={() => trocarCategoria("sorvetes")} className={categoria === "sorvetes" ? styles.ativo : ""}>
                     <FaIceCream />
                     Sorvetes
                 </button>
-                <button onClick={() => setCategoria("bolos")} className={categoria === "bolos" ? styles.ativo : ""}>
+                <button onClick={() => trocarCategoria("bolos")} className={categoria === "bolos" ? styles.ativo : ""}>
                     <FaBirthdayCake />
                     Bolos
                 </button>
-                <button onClick={() => setCategoria("doces")} className={categoria === "doces" ? styles.ativo : ""}>
+                <button onClick={() => trocarCategoria("doces")} className={categoria === "doces" ? styles.ativo : ""}>
                     <FaCandyCane />
                     Doces
                 </button>
-                <button onClick={() => setCategoria("bebidas")} className={categoria === "bebidas" ? styles.ativo : ""}>
+                <button onClick={() => trocarCategoria("bebidas")} className={categoria === "bebidas" ? styles.ativo : ""}>
                     {/* <IoCafe /> */}
                     <FaGlassWhiskey />
                     Bebidas
                 </button>
             </div>
 
-            <div className={styles.container}>
+            <div id='container' className={styles.container}>
                 <button className={styles.left} onClick={() => scroll(-1)}>{"<"}</button>
 
                 <div className={styles.lista} ref={listaRef || null}>
