@@ -16,7 +16,7 @@ nav {
 }
 
 .scrolled {
-    background: #c7a2fbdb;
+    background: #c9a2ffa1;
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 20px #0000001a;
 }
@@ -75,7 +75,7 @@ nav {
 .menuAtivo {
     transform: scaleY(1);
     opacity: 1;
-    background-color: #c7a2fb;
+    background-color: #c9a2fff6;
     pointer-events: auto;
 }
 
