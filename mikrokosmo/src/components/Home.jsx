@@ -3,6 +3,12 @@ import styles from './Home.module.css'
 import ice from '../assets/ice-star.png'
 
 function Home() {
+    const irPara = (id) => {
+        document.getElementById(id)?.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
     return (
         <>
             <section id='home' className={styles.home}>
@@ -15,7 +21,7 @@ function Home() {
 
                     <p>Sorvetes artesanais, sobremesas irresistíveis e muito sabor em cada detalhe.</p>
 
-                    <button>Ver cardápio</button>
+                    <button onClick={() => irPara("cardapio")}>Ver cardápio</button>
                 </div>
             </section>
         </>
